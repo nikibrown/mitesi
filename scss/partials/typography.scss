@@ -1,0 +1,44 @@
+// --------------------------
+// Typography
+// --------------------------
+
+html,
+body {
+	color: #231F20;
+  font-family: $avenir;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+strong {
+  font-family: $avenirbold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	line-height: 1.3;
+}
+
+a {
+	text-decoration: none;
+
+	&,
+	&:active,
+	&:link,
+	&:visited {
+		color: $lightblue;
+	}
+
+	&:hover {
+		color: $darkblue;
+	}
+}
+
+p {
+	margin: 0 0 20px 0;
+}

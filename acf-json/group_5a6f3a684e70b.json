@@ -1,0 +1,161 @@
+{
+    "key": "group_5a6f3a684e70b",
+    "title": "Notice Bar",
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "fields": [
+        {
+            "key": "field_5a71c29123ae8",
+            "label": "Enable Notice bar",
+            "name": "enable_notice_bar",
+            "type": "true_false",
+            "instructions": "Turn on or off the notice bar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable"
+        },
+        {
+            "key": "field_5a6f3a774647e",
+            "label": "Notice Bar Text",
+            "name": "notice_bar_text",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a6f3a8b4647f",
+            "label": "Notice Bar Button Text",
+            "name": "notice_bar_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5a6f3aa146480",
+            "label": "Notice Bar Button Link",
+            "name": "notice_bar_button_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/"
+        },
+        {
+            "key": "field_5a6f3ae23c8da",
+            "label": "Notice Bar Start Date",
+            "name": "notice_bar_start_date",
+            "type": "date_picker",
+            "instructions": "Pick the date the notice bar should start.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5a6f3cac3c8db",
+            "label": "Notice Bar End Date",
+            "name": "notice_bar_end_date",
+            "type": "date_picker",
+            "instructions": "Pick the date the notice bar should end. If no date is entered, the notice will display indefinitely.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "m\/d\/Y",
+            "return_format": "m\/d\/Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5a71c8ca7ff8e",
+            "label": "Notice Bar Text Color",
+            "name": "notice_bar_text_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#222222"
+        },
+        {
+            "key": "field_5a71c8a77cae0",
+            "label": "Notice Bar Background Color",
+            "name": "notice_bar_background_color",
+            "type": "color_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "#FFA500"
+        }
+    ],
+    "modified": 1541192774
+}

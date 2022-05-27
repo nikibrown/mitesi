@@ -1,0 +1,26 @@
+/**
+ * Fonts
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,600,700);
+
+@font-face {
+	font-family: 'AvenirRegular';
+	src: url('../fonts/avenir/regular.eot');
+	src: url('../fonts/avenir/regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/avenir/regular.woff') format('woff'),
+		url('../fonts/avenir/regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AvenirBold';
+	src: url('../fonts/avenir/demi.eot');
+	src: url('../fonts/avenir/demi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/avenir/demi.woff') format('woff'),
+		url('../fonts/avenir/demi.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

@@ -1,0 +1,91 @@
+// --------------------------
+// Hero
+// --------------------------
+
+#hero {
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 120px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 769px) {
+    display: flex;
+    align-items: stretch;
+    height: 85vh;
+  }
+
+  > .container {
+    margin: 0 auto;
+    max-width: 1400px;
+
+    @media screen and (min-width: 769px) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+			top: 58px;
+    }
+  }
+}
+
+.hero__text {
+	background: rgba(0, 0, 0, .75);
+	color: $white;
+	padding: 30px 35px;
+
+  h2,
+  p {
+    margin: 0 0 20px 0;
+  }
+
+  h2 {
+    font-weight: normal;
+
+    @media screen and (max-width: 768px) {
+      font-size: 30px;
+    }
+
+    @media screen and (min-width: 769px) {
+      font-size: 36px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 769px) {
+    width: 70%;
+  }
+
+  @media screen and (min-width: 1025px) {
+    max-width: 600px;
+    width: 50%;
+  }
+}
+
+#home-slides {
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+
+	img {
+		display: none;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+			top: 0;
+			left: 0;
+		width: 100%;
+		z-index: 1;
+
+		&.active {
+			display: block;
+			z-index: 3;
+		}
+	}
+}

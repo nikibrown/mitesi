@@ -1,0 +1,114 @@
+// --------------------------
+// Button
+// --------------------------
+
+.btn {
+  background: $lightblue;
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: .1em;
+  padding: 15px 25px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: darken($lightblue, 10%);
+    text-decoration: none;
+  }
+
+  &,
+  &:active,
+  &:link,
+  &:visited {
+    color: $white;
+  }
+}
+
+.btn-sm {
+  font-size: 11px;
+  padding: 10px 15px;
+}
+
+.btn-text {
+  font-family: $avenirbold;
+  letter-spacing: .05em;
+  padding: 0;
+
+  &,
+  &:hover {
+    background: transparent;
+  }
+
+  &,
+  &:active,
+  &:link,
+  &:visited {
+    color: $lightblue;
+  }
+
+	&:hover {
+		color: $darkblue;
+	}
+}
+
+.btn-light {
+  transition: all .2s ease-in-out;
+
+  &,
+  &:active,
+  &:link,
+  &:visited,
+  &:hover {
+    background: $white;
+    border: 2px solid transparent;
+    color: $darkgray !important;
+  }
+}
+
+.btn-outline {
+  transition: all .2s ease-in-out;
+
+  &,
+  &:active,
+  &:link,
+  &:visited {
+    background: transparent;
+    border: 2px solid $white;
+    color: $white !important;
+  }
+  &:hover {
+    background: $white;
+    color: $darkblue !important;
+  }
+}
+
+.btn-transparent {
+  &,
+  &:active,
+  &:link,
+  &:visited {
+    background: transparent;
+    color: $white;
+  }
+}
+
+.btn-menu {
+
+  a {
+    background: transparent;
+    border: 2px solid $white;
+    color: $white !important;
+    display: block;
+    font-family: $avenirbold;
+    padding-right: 30px;
+    padding-left: 30px;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      background: $white;
+      border-color: transparent;
+      color: $darkblue !important;
+    }
+  }
+}

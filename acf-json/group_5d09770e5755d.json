@@ -1,0 +1,40 @@
+{
+    "key": "group_5d09770e5755d",
+    "title": "News Fields",
+    "fields": [
+        {
+            "key": "field_5d09771371ddf",
+            "label": "External Link",
+            "name": "external_link",
+            "type": "url",
+            "instructions": "If this field has a value, users will be redirected to this url instead of to the internal link for this News item.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1560901945
+}

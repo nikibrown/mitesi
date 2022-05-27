@@ -1,0 +1,545 @@
+// --------------------------
+// Header
+// --------------------------
+
+#header {
+	background-color: rgba(0, 68, 124, .85);
+  position: absolute;
+    top: 0;
+    left: 0;
+  width: 100%;
+	z-index: 100;
+
+	#menu-main-navigation {
+		margin: 0;
+		padding: 0;
+	}
+
+  ul#menu-main-navigation > li {
+    font-family: $avenir;
+
+    a {
+      font-weight: normal;
+      letter-spacing: .1em;
+
+			@media screen and (max-width: 768px) {
+				font-size: 14px;
+			}
+
+			@media screen and (min-width: 769px) {
+				font-size: 14px;
+			}
+    }
+  }
+}
+
+#logo_wrapper {
+	float: left;
+
+	@media screen and (min-width: 769px) {
+		padding-top: 30px;
+	}
+}
+
+#logo_table {
+	display: table;
+}
+
+#logo_table .logo_row {
+	display: table-row;
+}
+
+#logo_table .logo_cell {
+	height: 54px;
+	padding-left: 15px;
+	vertical-align: middle;
+	color: #fff;
+	display: table-cell;
+}
+
+#logo_table .logo_cell:first-child {
+	padding-left: 0;
+	padding-right: 15px;
+	border-right: 2px solid #FFFFFF;
+}
+
+#logo_table .logo_cell a:hover {
+	text-decoration: none;
+}
+
+#logo_table .logo_cell.mit_logo a {
+	width: 83px;
+	height: 43px;
+	background-image: url( '../images/mit_logo.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: transparent;
+	display: inline-block;
+}
+
+#logo_table .logo_cell.mit_logo a:hover {
+	background-image: url( '../images/mit_logo_over.png');
+}
+
+#logo_table .logo_cell.esi_logo a {
+	height: 47px;
+	background-image: url( '../images/esi_logo.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	color: transparent;
+	text-indent: -9999px;
+	overflow: hidden;
+	display: inline-block;
+	display: -moz-inline-stack;
+}
+
+#logo_table .logo_cell.esi_logo a:hover {
+	background-image: url( '../images/esi_logo_over.png');
+}
+
+#main_nav_wrapper {
+	float: left;
+}
+
+#mobile_menu_button {
+	position: absolute;
+	background-image: url( '../images/menu_burger.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+	color: transparent;
+	cursor: pointer;
+}
+
+#mobile_menu_button.open {
+	background-image: url( '../images/menu_close.png');
+	background-size: contain;
+}
+
+#header #menu-main-navigation a:hover {
+	text-decoration: none;
+}
+
+#header ul#menu-main-navigation li {
+	font-family: 'Muli', sans-serif;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 320px) {
+  #logo_table .logo_cell {
+		padding-left: 10px;
+	}
+
+	#logo_table .logo_cell:first-child {
+		padding-right: 10px;
+	}
+
+	#logo_table .logo_cell a:hover {
+		text-decoration: none;
+	}
+
+	#logo_table .logo_cell.esi_logo a {
+		padding-left: 39px;
+	}
+
+	#logo_table .logo_cell.mit_logo a {
+		width: 54px;
+		height: 28px;
+		background-size: 54px 28px;
+	}
+
+	#header #menu-main-navigation {
+		width: 80%;
+	}
+
+	#mobile_menu_button {
+		top: 15px;
+		width: 54px;
+		height: 28px;
+		background-size: 40px 23px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+  #header {
+		height: 74px;
+	}
+
+	#header > .container {
+		margin: 0 auto;
+		width: 95%;
+	}
+
+	#logo_table .logo_cell {
+		height: 40px;
+	}
+
+	#logo_table .logo_cell.mit_logo a {
+		width: 66px;
+		height: 34px;
+		background-size: 66px 34px;
+	}
+
+	#logo_table .logo_cell.esi_logo a {
+		width: 143px;
+		height: 34px;
+		background-size: 143px 34px;
+	}
+
+	#mobile_menu_button {
+		top: 19px;
+		width: 66px;
+		height: 34px;
+		background-size: 40px 23px;
+	}
+
+	#header ul#menu-main-navigation > li {
+		font-size: 1em;
+	}
+
+	#header ul#menu-main-navigation > li > ul li {
+		font-size: .875em;
+	}
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #header #menu-main-navigation {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 376px) and (max-width: 480px) {
+  #header #menu-main-navigation {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width:4 81px) and (max-width: 568px) {
+  #header #menu-main-navigation {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 569px) and (max-width: 667px) {
+  #header #menu-main-navigation {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 668px) and (max-width: 769px) {
+  #header #menu-main-navigation {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 769px) {
+  #header {
+		height: 85px;
+	}
+
+	#header .container {
+		position: static;
+	}
+
+	#logo_wrapper {
+		width: 80%;
+	}
+
+	#logo_table .logo_cell.esi_logo a {
+		margin-top: 4px;
+		width: 196px;
+	}
+
+	#main_nav_wrapper {
+		width: 20%;
+	}
+
+	#mobile_menu_button {
+		right: 6%;
+		top: 15px;
+		width: 83px;
+		height: 43px;
+		z-index: 111;
+	}
+
+	#header #menu-main-navigation {
+		background-color: #000000;
+		display: none;
+		list-style: none;
+		position: absolute;
+			top: 74px;
+			right: 0;
+		margin: 0;
+		padding: 0;
+		z-index: 110;
+	}
+
+	#header ul#menu-main-navigation > li {
+		padding: 30px;
+	}
+
+	#header ul#menu-main-navigation > li.menu-item-has-children {
+		background-image: url( '../images/plus_icon.png');
+		background-position: 98% center;
+		background-repeat: no-repeat;
+	}
+
+	#header ul#menu-main-navigation > li.expanded {
+		background-image: url( '../images/minus_icon.png');
+		background-position: 98% 17px;
+		background-repeat: no-repeat;
+	}
+
+	#header ul#menu-main-navigation > li.mobile_only {
+		background-image: none;
+		text-transform: capitalize;
+	}
+
+	#header ul#menu-main-navigation > li a {
+		color: #fff;
+	}
+
+	#header ul#menu-main-navigation > li.mobile_only a {
+		color: #999999;
+	}
+
+	#header ul#menu-main-navigation > li > ul {
+		padding: 5px 0;
+		display: none;
+	}
+
+	#header ul#menu-main-navigation > li > ul li ul {
+		display: none;
+	}
+
+	#header ul#menu-main-navigation > li > ul li {
+		padding: 5px 0;
+		font-size: .875em;
+		color: #999999;
+	}
+
+	#header ul#menu-main-navigation > li > ul li a {
+		color: #999999;
+	}
+
+	#header ul#menu-main-navigation > li > ul li > a:hover {
+		color: #fff;
+	}
+
+	#header ul#menu-main-navigation > li > ul > li > ul {
+		list-style-type: disc;
+		list-style-position: inside;
+		padding: 5px 0;
+	}
+
+	#header ul#menu-main-navigation > li > ul > li > ul li {
+		text-transform: capitalize;
+	}
+}
+
+@media screen and (min-width: 769px) {
+
+	#menu-main-navigation > li:last-child {
+	  a {
+	    background: transparent;
+	    border: 2px solid $white;
+	    color: $white !important;
+	    display: block;
+	    font-weight: bold;
+	    padding-right: 20px;
+	    padding-left: 20px;
+	    transition: all .2s ease-in-out;
+
+	    &:hover {
+	      background: $white;
+	      border-color: transparent;
+	      color: $darkblue !important;
+	    }
+	  }
+	}
+
+  #menu-top-navigation li {
+		float: left;
+		height: 24px;
+		font-size: 0.750em;
+		font-family: $avenirbold;
+		color: #fff;
+		line-height: 24px;
+	}
+
+	#menu-top-navigation li a {
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	#menu-top-navigation .top_nav_separator {
+		padding: 0 15px;
+	}
+
+	#menu-top-navigation li:last-child .top_nav_separator {
+		display: none;
+	}
+
+	#header {
+		position: fixed;
+		top: 0;
+		height: 117px;
+	}
+
+	body.admin-bar #header {
+		top: 32px;
+	}
+
+	#logo_wrapper {
+		width: 35%;
+	}
+
+	#logo_table .logo_cell.esi_logo a {
+		margin-top: 4px;
+		width: 196px;
+	}
+
+	#main_nav_wrapper {
+		width: 65%;
+		text-align: right;
+	}
+
+	#mobile_menu_button {
+		display: none;
+	}
+
+	#header ul#menu-main-navigation > li {
+		position: relative;
+		font-size: 1em;
+		display: inline-block;
+		padding: 35px 0 35px 30px;
+	}
+
+	#header ul#menu-main-navigation > li > a {
+		display: block;
+	}
+
+	#header ul#menu-main-navigation > li:first-child {
+		margin-left: 0;
+	}
+
+	#header ul#menu-main-navigation > li.mobile_only {
+		display: none;
+	}
+
+	#header ul#menu-main-navigation > li a {
+		color: #D1D3D4;
+		letter-spacing: 3px;
+		line-height: 47px;
+	}
+
+	#header ul#menu-main-navigation > li.current-menu-item a {
+		color: #fff;
+	}
+
+	#header ul#menu-main-navigation > li a:hover,
+	#header ul#menu-main-navigation > li:hover a,
+	#header ul#menu-main-navigation > li:active a,
+	#header ul#menu-main-navigation > li:focus a {
+		color: #fff;
+	}
+
+	#header ul#menu-main-navigation > li > ul {
+		position: absolute;
+			top: 115px;
+			left: 13px;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		z-index: 101;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+		width: 220px;
+	}
+
+	#header ul#menu-main-navigation > li:hover > ul {
+		visibility: visible;
+		opacity: 1;
+		transition-delay: 0s;
+	}
+
+	#header ul#menu-main-navigation > li > ul > li {
+	}
+
+	#header ul#menu-main-navigation > li > ul > li a {
+		background-color: rgba(0, 68, 124, .85);
+		color: #fff !important;
+		display: block;
+		padding: 0 17px;
+		transition: all 0.05s linear;
+
+		&:hover {
+			background-color: #fff;
+			color: $darkblue !important;
+		}
+	}
+
+	#header ul#menu-main-navigation > li > ul > li > ul {
+		display: none;
+	}
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+  #header ul#menu-main-navigation > li {
+		margin-left: 20px;
+	}
+
+	#header ul#menu-main-navigation > li > ul {
+		width: 200px;
+	}
+}
+
+@media screen and (min-width: 376px) and (max-width: 1000px) {
+	#header {
+		height: 74px;
+	}
+
+	#header > .container {
+		margin: 0 auto;
+		width: 95%;
+	}
+
+	#header #menu-main-navigation {
+		margin: 0;
+	}
+
+	#header ul#menu-main-navigation > li {
+		padding: 12px 0;
+	}
+
+	#header ul#menu-main-navigation > li a {
+		font-size: 12px;
+	}
+
+	#logo_wrapper {
+		padding-top: 15px;
+	}
+
+	#logo_table .logo_cell {
+		height: 40px;
+	}
+
+	#logo_table .logo_cell.mit_logo a {
+		width: 66px;
+		height: 34px;
+		background-size: 66px 34px;
+	}
+
+	#logo_table .logo_cell.esi_logo a {
+		width: 143px;
+		height: 34px;
+		background-size: 143px 34px;
+	}
+
+	#header ul#menu-main-navigation>li>ul {
+		top: 72px;
+		left: -19px;
+	}
+}

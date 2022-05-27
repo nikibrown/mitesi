@@ -1,0 +1,30 @@
+// --------------------------
+// Callout
+// --------------------------
+
+.callout {
+  background: $lightblue;
+  padding: 40px 0;
+  text-align: center;
+
+  h2 {
+    color: $white;
+    font-size: 36px;
+    font-weight: normal;
+    margin: 0 0 30px 0;
+  }
+
+  .btn {
+    @media screen and (max-width: 1023px) {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+		@media screen and (min-width: 1024px) {
+			margin: 0 3px;
+		}
+  }
+}

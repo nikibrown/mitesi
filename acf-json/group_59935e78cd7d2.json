@@ -1,0 +1,107 @@
+{
+    "key": "group_59935e78cd7d2",
+    "title": "Homepage Slideshow",
+    "fields": [
+        {
+            "key": "field_59935e812a10d",
+            "label": "Slideshow Overlay",
+            "name": "homepage_slideshow_overlay",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_59935e9a2a10e",
+            "label": "Slideshow Images",
+            "name": "homepage_slideshow",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Image",
+            "sub_fields": [
+                {
+                    "key": "field_59935eb92a10f",
+                    "label": "Image",
+                    "name": "homepage_slideshow_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "banner-mobile-landscape",
+                    "library": "all",
+                    "min_width": 2000,
+                    "min_height": 1240,
+                    "min_size": "",
+                    "max_width": 2500,
+                    "max_height": 1550,
+                    "max_size": "",
+                    "mime_types": "png, jpg, jpeg, gif"
+                },
+                {
+                    "key": "field_5d5f0c472d4d4",
+                    "label": "Caption",
+                    "name": "caption",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "site-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1566510172
+}

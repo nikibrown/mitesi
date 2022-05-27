@@ -1,0 +1,215 @@
+{
+    "key": "group_5dd2d9e573d8e",
+    "title": "Class Fields",
+    "fields": [
+        {
+            "key": "field_5dd2da4b2352a",
+            "label": "Subject Number",
+            "name": "subject_number",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Enter subject name",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5dd3ed935d49f",
+            "label": "Semester",
+            "name": "semester",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "fall": "Fall Semester",
+                "spring": "Spring Semester",
+                "iap": "IAP Period"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5dd2db032352b",
+            "label": "Courses",
+            "name": "courses",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "course1": "Course 01 - Civil and Environmental Engineering",
+                "course2": "Course 02 - Mechanical Engineering",
+                "course3": "Course 03 - Materials Science and Engineering",
+                "course4": "Course 04 - Architecture",
+                "course5": "Course 05 - Chemistry",
+                "course6": "Course 06 - Electrical Engineering and Computer Science",
+                "course7": "Course 07 - Biology",
+                "course8": "Course 08 - Physics",
+                "course9": "Course 09 - Brain and Cognitive Sciences",
+                "course10": "Course 10 - Chemical Engineering",
+                "course11": "Course 11 - Urban Studies and Planning",
+                "course12": "Course 12 - Earth, Atmospheric, and Planetary Sciences",
+                "course14": "Course 14 - Economics",
+                "course15": "Course 15 - Management",
+                "course16": "Course 16 - Aeronautics and Astronautics",
+                "course17": "Course 17 - Political Science",
+                "course18": "Course 18 - Mathematics",
+                "course20": "Course 20 - Biological Engineering",
+                "course21": "Course 21 - Humanities",
+                "course22": "Course 22 - Nuclear Science and Engineering",
+                "course24": "Course 24 - Linguistics and Philosophy",
+                "cc": "CC - Concourse Program",
+                "csb": "CSB - Computational and Systems Biology",
+                "ec": "EC - Edgerton Center",
+                "em": "EM - Engineering Management",
+                "es": "ES - Experimental Study Group",
+                "hst": "HST - Health Sciences and Technology",
+                "ids": "IDS - Institute for Data, Systems and Society",
+                "mas": "MAS - Media Arts and Sciences",
+                "scm": "SCM - Supply Chain Management",
+                "sts": "STS - Science, Technology, and Society",
+                "swe": "SWE - Engineering School-Wide Electives",
+                "cms": "CMS - Comparative Media Studies\/Writing",
+                "wgs": "WGS - Women's and Gender Studies",
+                "specialprograms": "Special Programs"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5dd2dc772352c",
+            "label": "Units Fulfilled",
+            "name": "units",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "Enter the number of units fulfilled",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 12,
+            "step": ""
+        },
+        {
+            "key": "field_5dd2dd3a2352d",
+            "label": "GIRs Fulfilled",
+            "name": "girs",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "hassa": "HASS - Arts",
+                "hassh": "HASS - Humanities",
+                "hasss": "HASS - Social Sciences",
+                "rest": "REST",
+                "lab": "Laboratory",
+                "cih": "Communication Intensive - HASS",
+                "cihw": "Communication Intensive - Writing Focused"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        },
+        {
+            "key": "field_5dd2de452352e",
+            "label": "Sustainable Development Goals",
+            "name": "sustainable_development_goals",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "sdg1": "01 - No Poverty",
+                "sdg2": "02 - Zero Hunger",
+                "sdg3": "03 - Good Health and Well-Being",
+                "sdg4": "04 - Quality Education",
+                "sdg5": "05 - Gender Equality",
+                "sdg6": "06 - Clean Water and Sanitation",
+                "sdg7": "07 - Affordable and Clean Energy",
+                "sdg8": "08 - Decent Work and Economic Growth",
+                "sdg9": "09 - Industry, Innovation and Infrastructure",
+                "sdg10": "10 - Reduced Inequalities",
+                "sdg11": "11 - Sustainable Cities and Communities",
+                "sdg12": "12 - Responsible Consumption and Production",
+                "sdg13": "13 - Climate Action",
+                "sdg14": "14 - Life Below Water",
+                "sdg15": "15 - Life on Land",
+                "sdg16": "16 - Peace, Justice and Strong Institutions",
+                "sdg17": "17 - Partnerships for the Goals"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "mitesi_classes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1624975067
+}

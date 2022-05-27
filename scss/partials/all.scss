@@ -1,0 +1,727 @@
+// --------------------------
+// All
+// --------------------------
+
+body:after {
+	content: url( '../images/mit_logo_over.png') url( '../images/esi_logo_over.png');
+	display: none;
+}
+
+/*** Images ***/
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+/*** Clearing Floats ***/
+
+.clr:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/***************
+SECTION BANNERS
+***************/
+
+#section_banner {
+	position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+	@media screen and (min-width: 569px) {
+		background-attachment: fixed;
+	}
+}
+
+#banner_heading {
+	position: absolute;
+	z-index: 1;
+
+	@media screen and (max-width: 568px) {
+		top: 55%;
+	}
+
+	@media screen and (min-width: 569px) and (max-width: 1000px) {
+		top: 50%;
+	}
+
+	@media screen and (min-width: 1001px) {
+		top: 55%;
+	}
+
+	@media screen and (max-width: 667px) {
+		left: 0;
+		width: 100%;
+	}
+
+	@media screen and (min-width: 668px) {
+		left: 6%;
+		width: 94%;
+	}
+}
+
+#banner_heading h1 {
+	font-family: 'Muli', sans-serif;
+	font-size: 2.750em;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	margin: 0;
+}
+
+#banner_heading h1 a {
+	color: #FFFFFF;
+}
+
+#banner_overlay {
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+
+/***************
+PAGE CONTENT
+***************/
+
+h1#page_title {
+	margin-bottom: 22px;
+	font-family: 'Muli', sans-serif;
+	font-size: 1.625em;
+	font-weight: normal;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.admin_edit_link {
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+/***************
+RIGHT SIDEBAR
+***************/
+
+/*** Sidebar Widgets ***/
+
+.sidebar_widget {
+	margin-bottom: 30px;
+	font-size: .875em;
+}
+
+#right_sidebar .sidebar_widget:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar_widget h2.widget_heading {
+	margin-bottom: 10px;
+	font-family: "Muli",sans-serif;
+	font-size: 1.250em;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.sidebar_widget p {
+	margin-bottom: 15px;
+}
+
+.sidebar_widget p:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar_widget ul {
+	margin: 15px 0;
+	padding-left: 15px;
+	list-style-type: disc;
+}
+
+.sidebar_widget ol {
+	margin: 15px 0;
+	padding-left: 15px;
+	list-style-type: decimal;
+}
+
+.sidebar_widget ul li {
+	margin-bottom: 8px;
+}
+
+.sidebar_widget ul li:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar_widget .widget_image img {
+	width: 100%;
+}
+
+.sidebar_widget .widget_caption {
+	margin-top: 10px;
+	font-style: italic;
+}
+
+/*** Mail Chimp Sign Up Form ***/
+
+.mc_input {
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+	border: 1px solid #dcdcdc;
+    font-family: "Open Sans",sans-serif;
+    font-size: 1em;
+}
+
+.mc_required, #mc-indicates-required {
+	color: #CC0000;
+}
+
+#mc_signup_submit {
+	width: 80%;
+	padding: 5px;
+	background-color: #203F7D;
+	border: none;
+	border-radius: 5px;
+	font-size: .750em;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+}
+
+/***************
+POST FORMATTING
+***************/
+
+/*** Headings ***/
+
+.post_formatting h1, .post_formatting h2, .post_formatting h3, .post_formatting h4, .post_formatting h5, .post_formatting h6 {
+	margin-bottom: 30px;
+	font-family: $avenirbold;
+	color: #203F7D;
+	line-height: 1.2;
+}
+
+.post_formatting h1, .post_formatting h2 {
+	font-size: 1.250em;
+}
+
+.post_formatting h3 {
+	font-size: 1.125em;
+}
+
+.post_formatting h4, .post_formatting h5, .post_formatting h6 {
+	font-size: 1em;
+}
+
+/*** Paragraphs ***/
+
+.post_formatting p {
+	margin-bottom: 30px;
+}
+
+.post_formatting p:last-child {
+	margin-bottom: 0;
+}
+
+/*** Blockquote ***/
+
+.post_formatting blockquote {
+	margin: 25px 10%;
+	font-style: italic;
+	color: #1B75BC;
+}
+
+.post_formatting + blockquote {
+	margin-top: 0;
+}
+
+/*** Lists ***/
+
+.post_formatting ul {
+	margin: 0 0 30px 0;
+	padding-left: 15px;
+	list-style-type: disc;
+	list-style-position: outside;
+}
+
+.post_formatting ol {
+	margin: 0 0 30px 0;
+	padding-left: 15px;
+	list-style-type: decimal;
+	list-style-position: outside;
+}
+
+.post_formatting li {
+	padding-bottom: 8px;
+}
+
+.post_formatting ul li:last-child, .post_content ol li:last-child {
+	padding-bottom: 0;
+}
+
+/*** Divider ***/
+
+.post_formatting hr {
+	clear: both;
+	margin: 5px 0;
+	width: 100%;
+	height: 1px;
+	background-color: transparent;
+	border: 0;
+	border-top: 1px solid #231F20;
+}
+
+.post_formatting hr + p, .post_formatting hr + h1, .post_formatting hr + h2, .post_formatting hr + h3, .post_formatting hr + h4, .post_formatting hr + h5, .post_formatting hr + h6 {
+	margin-top: 30px;
+}
+
+/*** Images ***/
+
+.post_formatting img {
+	display: inline-block;
+}
+
+.post_formatting .alignnone {
+    margin: 5px 30px 30px 0;
+}
+
+.post_formatting .aligncenter,
+.post_formatting div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.post_formatting .alignright {
+    float: right;
+    max-width: 50%;
+    margin: 5px 0 10px 30px;
+}
+
+.post_formatting .alignleft {
+    float: left;
+    max-width: 50%;
+    margin: 5px 30px 10px 0;
+}
+
+.post_formatting a img.alignright {
+    float: right;
+    max-width: 50%;
+    margin: 5px 0 10px 30px;
+}
+
+.post_formatting a img.alignnone {
+    margin: 5px 30px 30px 0;
+}
+
+.post_formatting a img.alignleft {
+    float: left;
+    max-width: 50%;
+    margin: 5px 30px 10px 0;
+}
+
+.post_formatting a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.post_formatting .wp-caption {
+    max-width: 96%;
+    padding: 10px 3px;
+    text-align: center;
+}
+
+.post_formatting .wp-caption.alignnone {
+    margin: 5px 30px 30px 0;
+}
+
+.post_formatting .wp-caption.alignleft {
+	max-width: 50%;
+    margin: 5px 30px 10px 0;
+}
+
+.post_formatting .wp-caption.alignright {
+	max-width: 50%;
+    margin: 5px 0 10px 30px;
+}
+
+.post_formatting .wp-caption img {
+	width: auto;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+}
+
+.post_formatting .wp-caption p.wp-caption-text {
+	padding: 0 4px 5px;
+    font-size: .875em;
+	font-style: italic;
+}
+
+#post_content .wp-smiley {
+	width: auto;
+	border: none;
+}
+
+.post_formatting iframe {
+	margin: 0 auto;
+	display: block;
+}
+
+/***************
+CONTACT
+***************/
+
+/*** Contact Info ***/
+
+.contact_divider {
+	margin-top: 20px;
+}
+
+.contact_label {
+	padding-right: 5px;
+}
+
+.acf-map {
+	width: 100%;
+	height: 300px;
+	border: 1px solid #FFFFFF;
+	margin-top: 40px;
+}
+
+/***************
+HOME
+***************/
+
+#fullpage .section {
+	position: relative;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#fullpage .section .slide_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(35,34,34,0.8), rgba(35,34,34,0) 45%);
+	z-index: 1;
+}
+
+#fullpage .section .slide_heading_wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+h2.slide_heading {
+	font-family: 'Muli', sans-serif;
+	font-weight: normal;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+h2.slide_heading a {
+	color: #FFFFFF;
+}
+
+#fullpage .section .scroll_button {
+	position: absolute;
+	bottom: 70px;
+	width: 50px;
+	height: 50px;
+	background-image: url( '../images/scroll_button.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: transparent;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#fullpage .section .scroll_label {
+	position: absolute;
+	bottom: 50px;
+	width: 200px;
+	font-size: 1em;
+	color: #FFFFFF;
+	text-align: center;
+}
+
+#fullpage .section:nth-last-of-type(2) .scroll_button, #fullpage .section:nth-last-of-type(2) .scroll_label {
+	display: none;
+}
+
+/***************
+1025 AND UP
+***************/
+
+@media screen and (min-width:1025px) {
+
+	/***************
+	CONTACT
+	***************/
+
+	.acf-map {
+		width: 70%;
+	}
+
+	#main_content.no_sidebar .acf-map {
+		width: 50%;
+	}
+
+	/***************
+	HOME
+	***************/
+
+	#fullpage .section .scroll_label {
+		left: 46%;
+	}
+
+}
+
+/***************
+768 AND UNDER
+***************/
+
+@media screen and (max-width:768px) {
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		text-align: center;
+	}
+
+	#fullpage .section .scroll_label {
+		bottom: 48px;
+		font-size: .875em;
+	}
+
+}
+
+/***************
+667 AND UNDER
+***************/
+
+@media screen and (max-width:667px) {
+
+	/***************
+	HOME
+	***************/
+
+	#slide_overlay {
+		background: linear-gradient(to right, rgba(35,34,34,0.8), rgba(35,34,34,0) 75%);
+	}
+
+}
+
+/***************
+TABLET LANDSCAPE AND DESKTOP
+***************/
+
+@media screen and (min-width:769px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 2.750em;
+		letter-spacing: 18px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 50%;
+	}
+
+}
+
+/***************
+TABLET LANDSCAPE
+***************/
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+	/***************
+	HOME
+	***************/
+
+	#slide_overlay {
+		background: linear-gradient(to right, rgba(35,34,34,0.8), rgba(35,34,34,0) 50%);
+	}
+
+	#fullpage .section .scroll_label {
+		left: 43%;
+		bottom: 45px;
+	}
+
+}
+
+/***************
+TABLET PORTRAIT
+***************/
+
+@media screen and (min-width:668px) and (max-width:768px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 2.625em;
+		letter-spacing: 12px;
+	}
+
+	#slide_overlay {
+		background: linear-gradient(to right, rgba(35,34,34,0.8), rgba(35,34,34,0) 55%);
+	}
+
+	#fullpage .section .scroll_button {
+		left: 47%;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 37%;
+	}
+
+}
+
+/***************
+MOBILE LANDSCAPE WIDE
+***************/
+
+@media screen and (min-width:569px) and (max-width:667px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 2.625em;
+		letter-spacing: 12px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 47%;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 36%;
+	}
+
+}
+
+/***************
+MOBILE LANDSCAPE MEDIUM
+***************/
+
+@media screen and (min-width:481px) and (max-width:568px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 2.50em;
+		letter-spacing: 10px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 46%;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 33%;
+	}
+
+}
+
+/***************
+MOBILE LANDSCAPE NARROW
+***************/
+
+@media screen and (min-width:376px) and (max-width:480px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 2.250em;
+		letter-spacing: 8px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 45%;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 30%;
+	}
+
+}
+
+/***************
+MOBILE PORTRAIT WIDE
+***************/
+
+@media screen and (min-width:321px) and (max-width:375px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 1.875em;
+		letter-spacing: 5px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 44%;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 25%;
+	}
+
+}
+
+/***************
+MOBILE PORTRAIT NARROW
+***************/
+
+@media screen and (max-width:320px) {
+
+	/***************
+	HOME
+	***************/
+
+	h2.slide_heading {
+		font-size: 1.625em;
+		letter-spacing: 5px;
+	}
+
+	#fullpage .section .scroll_button {
+		left: 44%;
+		width: 40px;
+		height: 40px;
+		background-size: 40px 40px;
+	}
+
+	#fullpage .section .scroll_label {
+		left: 20%;
+	}
+
+}
