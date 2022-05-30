@@ -1,0 +1,34 @@
+{
+	"name": "mitesi",
+	"version": "1.0.0",
+	"description": "mitesi",
+	"main": "index.html",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"gulp": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nikibrown/mitesi.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nikibrown/mitesi/issues"
+	},
+	"homepage": "https://github.com/nikibrown/mitesi",
+	"devDependencies": {
+		"bootstrap": "^5.1.3",
+		"eslint": "^8.6.0",
+		"eslint-config-prettier": "^8.3.0",
+		"gulp-postcss": "^8.0.0",
+		"gulp-sass": "^5.1.0",
+		"prettier": "^2.5.1",
+		"sass": "^1.49.9"
+	},
+	"dependencies": {
+		"browser-sync": "^2.26.14",
+		"gulp": "^4.0.2",
+		"gulp-file-include": "^2.3.0"
+	}
+}
