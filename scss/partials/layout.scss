@@ -241,7 +241,7 @@
 
 					@media screen and (min-width: 569px) {
 						margin: 0 10px;
-						width: (100% / 3);
+						width: calc(100% / 3);
 
 						&:first-child {
 							margin-left: 0;

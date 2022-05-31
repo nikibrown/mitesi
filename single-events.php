@@ -60,66 +60,162 @@
 
 							<div id="main_content" class="<?php echo($main_content_class); ?>" role="main">
 
-								<?php //edit_post_link('Edit Page', '<div class="admin_edit_link">', '</div>');?>
 
 								<div class="post_formatting media_editor">
 									<h2><?php the_title(); ?></h2>
-									<p class="date-time">
-										<span class="dates">
-											JUNE 12, 2022 - JUNE 19, 2022
-										</span>
-										<span class="times">
-											9:00AM - 5:00PM
-										</span>
-									</p>
+									<div class="section-intro">
+										<p class="date-time">
+											<span class="dates">
+												<?php the_field("event_date"); ?>
+											</span>
+											<span class="times">
+												<?php the_field("event_time"); ?>
+											</span>
+										</p>
+										<?php the_field("event_intro_text"); ?>
+									</div><!--./section-intro-->
 
-									<details open class="section-accordion section-location">
-										<summary class="section-title">Accordion section title</summary>
-										<div class="section-inner">
-											<p>Event main description the Environmental Solutions Initiative, in collaboration with the Vice-Minister of the Environment and Sustainable Development of Colombia, Nicolás Galarza Sánchez, and supported by MIT Latin American Office conducted a week-long fieldwork in Bogotá and Quibdó for the class “Biodiversity and Cities: a Perspective for Colombian Cities” co-instructed by Professor John Fernandez, Research Program Director Marcela Angel, Post-Doctoral Fellow Norhan Bayomi, and Doctorate Instructor Alessandra Fabbri.</p>
-										</div>
-									</details>
+									<?php if( have_rows('event_sections') ): ?>
+										<?php while( have_rows('event_sections') ): the_row(); ?>
+											<?php if( get_row_layout() == 'generic_section' ): ?>
+												<details 
+												<?php if( get_sub_field('open_accordion') ) { ?>open <?php } ?>
+												class="section-accordion section-generic">
+													<summary class="section-accordion-title">
+														<span><?php the_sub_field("section_headline"); ?></span>
+													</summary>
+													<div class="section-inner">
+														<?php the_sub_field("generic_section_content"); ?>
+													</div>
+												</details><!--./section-generic-->
+											<?php elseif( get_row_layout() == 'sponsors_section' ): ?>
+												<details 
+													<?php if( get_sub_field('open_accordion') ) { ?>open <?php } ?>
+													class="section-accordion section-sponsors">
+													<summary class="section-accordion-title">
+														<span><?php the_sub_field("section_headline"); ?></span>
+													</summary>
+													<div class="section-inner">
+														<?php the_sub_field("section_intro"); ?>
 
-									<details class="section-accordion section-location">
-										<summary class="section-title">Agenda section</summary>
-										<div class="section-inner">
-											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, facilis. Vel, dignissimos. A sed perferendis eligendi provident, quidem libero suscipit, corporis, corrupti voluptate beatae impedit. Est, eos. Ratione, harum illo?</p>
+														<?php if( have_rows('sponsors') ): ?>
+															<?php while( have_rows('sponsors') ): the_row(); 
+																$sponsor_logo = get_sub_field('sponsor_logo'); ?>
+																<div class="sponsor">
+																	<div class="sponsor-img">
+																		<a href="<?php the_sub_field("sponsor_link"); ?>" target="blank">
+																			<img src="<?php echo $sponsor_logo; ?>" alt="<?php the_sub_field("sponsor_name"); ?>" />
+																		</a>
+																	</div>
+																
+																	<div class="sponsor-desc">
+																		<h5>
+																			<a href="<?php the_sub_field("sponsor_link"); ?>" target="blank">
+																				<?php the_sub_field("sponsor_name"); ?>
+																			</a>
+																		</h5>
+																		<?php the_sub_field("sponsor_description"); ?>
+																	</div>
+																</div><!--/.sponsor-->
+															<?php endwhile; ?>
+														<?php endif; ?>
+													</div>
+												</details><!--./section-sponsors-->
 											
-											<h3>Optional Section Heading Tuesday November 11</h3>
-											<table>
-												<tr>
-													<td>
-														8:00AM
-													</td>
-													<td>Title of agenda item</td>
-												</tr>
-												<tr>
-													<td>
-														9:00AM
-													</td>
-													<td>Title of agenda item</td>
-												</tr>
-												<tr>
-													<td>
-														10:00AM
-													</td>
-													<td>Title of agenda item</td>
-												</tr>
-											</table>
-										</div>
-									</details>
+											<?php elseif( get_row_layout() == 'agenda_section' ): ?>
+												<details	 
+												<?php if( get_sub_field('open_accordion') ) { ?>open <?php } ?>
+												class="section-accordion section-agenda">
+													<summary class="section-accordion-title"><span><?php the_sub_field("section_headline"); ?></span></summary>
+													<div class="section-inner">
+														<?php the_sub_field("section_intro"); ?>
+														<?php if( have_rows('agenda_item') ): ?>
+															<?php while( have_rows('agenda_item') ): the_row(); ?>
+																<div class="agenda">
+																	<h3 class="table-header"><?php the_sub_field("agenda_heading"); ?></h3>
+																	<table>
+																		<colgroup>
+																			<col width="20%">
+																			<col width="80%">
+																		</colgroup>
+																		<?php if( have_rows('agenda_item_row') ): ?>
+																			<?php while( have_rows('agenda_item_row') ): the_row(); ?>
+																				<tr>
+																					<td class="time">
+																						<?php the_sub_field("agenda_time_slot"); ?>
+																					</td>
+																					<td>
+																						<?php the_sub_field("agenda_item_text"); ?>
+																					</td>
+																				</tr>
+																			<?php endwhile; ?>
+																		<?php endif; ?>
+																	</table>
+																</div>
+															<?php endwhile; ?>
+														<?php endif; ?>
+													</div>
+												</details><!--./section-agenda -->
 
-									<details class="section-accordion section-location">
-										<summary class="section-title">Sponsors</summary>
-										<div class="section-inner">
-											<p>Event main description the Environmental Solutions Initiative, in collaboration with the Vice-Minister of the Environment and Sustainable Development of <a href="">Colombia, Nicolás Galarza Sánchez</a>, and supported by MIT Latin American Office conducted a week-long fieldwork in Bogotá and Quibdó for the class “Biodiversity and Cities: a Perspective for Colombian Cities” co-instructed by Professor John Fernandez, Research Program Director Marcela Angel, Post-Doctoral Fellow Norhan Bayomi, and Doctorate Instructor Alessandra Fabbri.</p>
-										</div>
-									</details>
+											<?php elseif( get_row_layout() == 'speakers_section' ): ?>
+												<details
+												<?php if( get_sub_field('open_accordion') ) { ?>open <?php } ?>
+												class="section-accordion section-speakers">
+													<summary class="section-accordion-title">
+														<span><?php the_sub_field("section_headline"); ?></span>
+													</summary>
+													<div class="section-inner">
+														<?php the_sub_field("section_intro"); ?>
+														
+														<?php if( have_rows('speaker') ): ?>
+															<?php while( have_rows('speaker') ): the_row(); 
+																$speaker_headshot= get_sub_field('speaker_headshot');
+															?>
+																<div class="speaker">
+																	<div class="speaker-img">																		
+																		<img src="<?php echo $speaker_headshot; ?>" alt="<?php the_sub_field("speaker_name"); ?>" />
+																		<ul class="social">
+																			<?php if( get_sub_field('linkedin_url') ): ?>
+																				<li>
+																					<a href="<?php the_sub_field('linkedin_url'); ?>" target="blank">
+																						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/linkedin.png" alt="Follow  <?php the_sub_field("speaker_name"); ?> on Linkedin">
+																					</a>
+																				</li>
+																			<?php endif; ?>
+																			<?php if( get_sub_field('twitter_url') ): ?>
+																				<li>
+																					<a href="<?php the_sub_field('twitter_url'); ?>" target="blank">
+																						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/twitter.png" alt="Follow  <?php the_sub_field("speaker_name"); ?> on Twitter">
+																					</a>
+																				</li>
+																			<?php endif; ?>
+																			<?php if( get_sub_field('facebook_url') ): ?>
+																				<li>
+																					<a href="<?php the_sub_field('facebook_url'); ?>" target="blank">
+																						<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.png" alt="Follow  <?php the_sub_field("speaker_name"); ?> on Facebook">
+																					</a>
+																				</li>
+																			<?php endif; ?>
+																		</ul>
+																	</div>
+																
+																	<div class="speaker-desc">
+																		<h5><?php the_sub_field("speaker_name"); ?></h5>
+																		<?php the_sub_field("speaker_credentials"); ?>
+																		<?php the_sub_field("speaker_bio"); ?>
+																	</div>
+																</div>
+															<?php endwhile; ?>
+														<?php endif; ?>
+													</div>
+												</details>
+											<?php endif; ?>
+											
+										<?php endwhile; ?>
+									<?php endif; ?>
 
-									
-								</div>
-
-                               
+								</div><!--/post_formatting -->
+								
 							</div><!--End Main Content-->
 
 							<?php if (is_active_sidebar('right_sidebar_widgets')) : ?>

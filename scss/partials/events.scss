@@ -1,0 +1,152 @@
+.section-intro {
+	margin-bottom: 50px;
+}
+
+.date-time {
+	color: #203F7D;
+	font-size: 20px;
+	span {
+		display: block;
+	}
+}
+
+
+summary {
+	list-style-image: url(../images/accordion-arrow.gif);
+
+	details[open] & {
+		list-style-image: url(../images/accordion-arrow-open.gif);
+	}
+
+	&::marker {
+		color: transparent;
+	}
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+// general accordion sections
+.section-accordion {
+	
+
+	.section-accordion-title {
+		margin-bottom: 15px;
+		font-family: "AvenirBold";
+		font-size: 22px;
+		color: #203F7D;
+		line-height: 1.2;
+		position: relative;
+
+		span {
+			position: absolute;
+			top: 2px;
+			left: 45px;
+		}
+	}
+
+	.section-inner {
+		margin-bottom: 50px;
+		padding-left: 45px;
+
+		h3 {
+			color: $black;
+		}
+	}	
+}
+
+
+.section-sponsors {
+	.sponsor {
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (min-width: 1000px) {
+			flex-direction: row;
+		}
+
+		margin-bottom: 45px;
+
+		.sponsor-img {
+			min-width: 250px;
+			margin-right: 40px;
+		}
+
+		h5 {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.section-speakers {
+	.speaker {
+		display: flex;
+		flex-direction: column;
+
+		@media screen and (min-width: 1000px) {
+			flex-direction: row;
+		}
+
+		margin-bottom: 45px;
+
+		.speaker-img {
+			min-width: 170px;
+			margin-right: 40px;
+		}
+
+		h5 {
+			margin-bottom: 0;
+		}
+
+		.social {
+			list-style-type: none;
+			margin: 10px 0 0 0;
+			padding-left: 0;
+
+			li {
+				display: inline;
+			}
+		}
+	}
+}
+
+.section-agenda {
+	.agenda {
+		margin-bottom: 20px;
+	}
+
+	.table-header {
+		border-top: 5px solid $brand-primary;
+		margin-left: -45px;
+		padding-left: 45px;
+		padding-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	h5 {
+		color: $black;
+		margin-bottom: 0;
+	}
+
+	table {
+		border-collapse: collapse;
+		margin-left: -45px;
+		width: calc(100% + 45px);
+		.time {
+			padding-left: 45px;
+		}
+
+		tr {
+			border-top: 1px solid $mediumgray;
+			vertical-align: top;
+			&:nth-child(even) {
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.section-generic {
+
+}
