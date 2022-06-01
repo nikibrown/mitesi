@@ -18,7 +18,14 @@
 
 				<?php while (have_posts()): the_post() ?>
 					<!-- <div id="section_banner"<?php if (has_post_thumbnail()) { ?> style="background-image: url(<?php the_post_thumbnail_url(); ?>)"<?php } ?>> -->
-					<div id="section_banner" style='background-image: url("/wp-content/uploads/2016/03/MENA-earth-at-night.jpg")'>
+
+					<?php if(get_field("event_hero_image")) { ?>
+						<div id="section_banner" style='background-image: url("<?php the_field("event_hero_image"); ?>")'>
+					<?php } else { ?>
+						<div id="section_banner" style='background-image: url("/wp-content/uploads/2016/03/MENA-earth-at-night.jpg")'>
+					<?php } ?>
+					
+						
 						<div id="banner_heading">
 							<h1>
 								Events
@@ -62,8 +69,9 @@
 
 
 								<div class="post_formatting media_editor">
-									<h2><?php the_title(); ?></h2>
+									
 									<div class="section-intro">
+										<h1><?php the_title(); ?></h1>
 										<p class="date-time">
 											<span class="dates">
 												<?php the_field("event_date"); ?>
@@ -215,7 +223,7 @@
 									<?php endif; ?>
 
 								</div><!--/post_formatting -->
-								
+
 							</div><!--End Main Content-->
 
 							<?php if (is_active_sidebar('right_sidebar_widgets')) : ?>

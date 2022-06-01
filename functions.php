@@ -536,3 +536,37 @@ function shortcode_contactvalue($atts)
 }
 
 add_shortcode('contactvalue', 'shortcode_contactvalue');
+
+
+function custom_button_shortcode( $atts, $content = null ) {
+   
+    // shortcode attributes
+    extract( shortcode_atts( array(
+        'url'    => '',
+        'text'   => '',
+		'color' => '',
+    ), $atts ) );
+ 
+    $content = $text ? $text : $content;
+ 
+    // Returns the button with a link
+    if ( $url ) {
+ 
+        $link_attr = array(
+            'href'   => esc_url( $url ),
+            'class'  => 'btn btn-updated '. $color
+        );
+ 
+        $link_attrs_str = '';
+        foreach ( $link_attr as $key => $val ) {
+            if ( $val ) {
+ 
+                $link_attrs_str .= ' ' . $key . '="' . $val . '"';
+            }
+        }
+
+        return '<a' . $link_attrs_str . '>' . do_shortcode( $content ) . '</a>';
+    }    
+ 
+}
+add_shortcode( 'button', 'custom_button_shortcode' );

@@ -2431,6 +2431,9 @@ MOBILE PORTRAIT NARROW
 .section-intro {
   margin-bottom: 50px;
 }
+.section-intro h1 {
+  font-size: 32px !important;
+}
 
 .date-time {
   color: #203F7D;
@@ -2438,6 +2441,21 @@ MOBILE PORTRAIT NARROW
 }
 .date-time span {
   display: block;
+}
+
+.btn.btn-updated {
+  background-color: #365f8d;
+  border-radius: 3px;
+  font-family: "AvenirBold";
+}
+.btn.btn-updated:hover {
+  background-color: #284668;
+}
+.btn.btn-updated.red {
+  background-color: #a31f34;
+}
+.btn.btn-updated.red:hover {
+  background-color: #781726;
 }
 
 summary {

@@ -1,5 +1,9 @@
 .section-intro {
 	margin-bottom: 50px;
+
+	h1 {
+		font-size: 32px!important;
+	}
 }
 
 .date-time {
@@ -8,6 +12,22 @@
 	span {
 		display: block;
 	}
+}
+
+.btn.btn-updated {
+	background-color: #365f8d;
+	border-radius: 3px;
+	font-family: "AvenirBold";
+	&:hover {
+		background-color: darken(#365f8d, 10%);
+	}
+	&.red {
+		background-color: #a31f34;
+		&:hover {
+			background-color: darken(#a31f34, 10%);
+		}
+	}
+
 }
 
 
